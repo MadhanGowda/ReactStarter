@@ -1,10 +1,13 @@
+import { POPULATE_PRODUCTS } from '../actions/actionTypes';
 
-function productReducer(state = 0, action) {
+
+function productReducer(state = [], action) {
   switch (action.type) {
-  case 'INCREMENT':
-    return state + 1
-  case 'DECREMENT':
-    return state - 1
+  case POPULATE_PRODUCTS:
+    return [
+      ...state,
+      ...action.data,
+    ];
   default:
     return state
   }
