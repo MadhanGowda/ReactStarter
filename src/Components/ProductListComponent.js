@@ -8,7 +8,7 @@ class ProductListComponent extends React.Component {
 	}
 
 	render() {
-		debugger;
+
 		const productList = this.props.products.map(function(product){
 			return (<ProductDetails
 			        	product={product}

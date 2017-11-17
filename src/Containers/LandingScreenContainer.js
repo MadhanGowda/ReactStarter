@@ -17,7 +17,6 @@ class LandingScreen extends React.Component {
   }
 
 	render(){
-    debugger;
 		return(
 			<div>
   			<HeaderBar />

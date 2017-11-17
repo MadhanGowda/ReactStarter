@@ -1,10 +1,18 @@
+import { ADD_TO_CART } from '../actions/actionTypes';
 
-function cartReducer(state = 0, action) {
+function cartReducer(state = {}, action) {
   switch (action.type) {
-  case 'INCREMENT':
-    return state + 1
-  case 'DECREMENT':
-    return state - 1
+  case ADD_TO_CART:
+    return {
+      ...state,
+      items: [
+        ...(state.items || []),
+        {
+          productId: action.data.id,
+          quantity: 1,
+        },
+      ]
+    }
   default:
     return state
   }
