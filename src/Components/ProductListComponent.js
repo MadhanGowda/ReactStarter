@@ -3,7 +3,7 @@ import React from 'react';
 import ProductDetails from '../Components/Product';
 
 
-class ProductDetailsContiner extends React.Component{
+class ProductListComponent extends React.Component{
 	constructor(props){
 			super(props);
 		}
@@ -24,4 +24,4 @@ class ProductDetailsContiner extends React.Component{
 			);
 	}
 }
-export default ProductDetailsContiner;
+export default ProductListComponent;

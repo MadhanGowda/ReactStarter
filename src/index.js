@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import LandingScreen from './Containers/LandingScreenContainer'
+import DiscriptionScreen from './Containers/DiscriptionScreenContainer'
 
 
 //create a component that output html
@@ -9,7 +10,7 @@ const App = () => {
     return (
         <div>
 
-          <LandingScreen />
+          <DiscriptionScreen />
         </div>
         );
 }

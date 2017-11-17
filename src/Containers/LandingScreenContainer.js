@@ -1,6 +1,7 @@
 import React from 'react';
 
-import ProductDetailsContiner from './ProductContiner.js';
+import ProductListComponent from '../Components/ProductListComponent.js';
+import HeaderBar from '../Components/HeaderBar.js';
 
 const ProductData = [
 	{
@@ -34,7 +35,8 @@ class LandingScreen extends React.Component{
 
 		return(
 			<div>
-			<ProductDetailsContiner prod = {ProductData} />
+			<HeaderBar />
+			<ProductListComponent prod = {ProductData} />
 			</div>
 			);
 	}
