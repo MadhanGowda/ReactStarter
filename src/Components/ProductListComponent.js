@@ -1,27 +1,69 @@
 import React from 'react';
+import ProductDetails from './Product';
 
-import ProductDetails from '../Components/Product';
+class ProductListComponent extends React.Component {
 
-
-class ProductListComponent extends React.Component{
-	constructor(props){
+	constructor(props) {
 			super(props);
-		}
-	render(){
+	}
 
-		const Product_List = [];
-		this.props.prod.forEach(function(product){
-			Product_List.push(<ProductDetails produc={product} key={product.id}/>);
+	render() {
+
+		const productList = this.props.products.map(function(product){
+			return (<ProductDetails
+			        	product={product}
+			        	key={product.id}/>);
 		});
+
 		return(
-			<table>
-			<thead>
-			</thead>
-				<tbody>
-					{Product_List}
-				</tbody>
-			</table>
+			<div>
+				<ul>
+					{productList}
+				</ul>
+			</div>
 			);
 	}
 }
+
+ProductListComponent.defaultProps = {
+	products: [
+		{
+        id: 1,
+        name: 'TV',
+        url: 'https://images-na.ssl-images-amazon.com/images/I/81qex9rNZQL._SL1500_.jpg',
+        price: 1000,
+    },
+    {
+        id: 2,
+        name: 'TV',
+        url: 'https://images-na.ssl-images-amazon.com/images/I/81qex9rNZQL._SL1500_.jpg',
+        price: 1000,
+    },
+		{
+        id: 3,
+        name: 'TV',
+        url: 'https://images-na.ssl-images-amazon.com/images/I/81qex9rNZQL._SL1500_.jpg',
+        price: 1000,
+    },
+    {
+        id: 4,
+        name: 'TV',
+        url: 'https://images-na.ssl-images-amazon.com/images/I/81qex9rNZQL._SL1500_.jpg',
+        price: 1000,
+    },
+    {
+        id: 5,
+        name: 'TV',
+        url: 'https://images-na.ssl-images-amazon.com/images/I/81qex9rNZQL._SL1500_.jpg',
+        price: 1000,
+    },
+    {
+        id: 6,
+        name: 'TV',
+        url: 'https://images-na.ssl-images-amazon.com/images/I/81qex9rNZQL._SL1500_.jpg',
+        price: 1000,
+    }
+	],
+};
+
 export default ProductListComponent;

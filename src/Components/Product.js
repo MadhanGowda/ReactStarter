@@ -1,10 +1,11 @@
 import React from 'react';
+import PropType from 'prop-types';
 
 class Product extends React.Component{
 	render(){
 		const product = this.props.product;
 		return(
-			<div className="product">
+			<li className="product">
     			<div className="title">{product.name}</div>
     			<img src={product.url}/>
                 <div>
@@ -14,17 +15,13 @@ class Product extends React.Component{
             			<i className="fa fa-minus" />
                     </div>
                 </div>
-			</div>
+			</li>
 			);
 	}
 }
 
-Product.defaultProps = {
-    product: {
-        name: 'TV',
-        url: 'https://images-na.ssl-images-amazon.com/images/I/81qex9rNZQL._SL1500_.jpg',
-        price: 1000,
-    },
+Product.propTypes = {
+    product: PropType.object.isRequired,
 };
 
 export default Product;
