@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import ProductDetailsContiner from './Containers/ProductContiner'
+import LandingScreen from './Containers/LandingScreenContainer'
+
 
 //create a component that output html
 const App = () => {
     return (
         <div>
-          Hello World
-          <ProductDetailsContiner />
+
+          <LandingScreen />
         </div>
         );
 }
