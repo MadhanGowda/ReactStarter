@@ -1,21 +1,30 @@
 import React from 'react';
 
-class ProductDetails extends React.Component{
+class Product extends React.Component{
 	render(){
-		const product = this.props.produc;
+		const product = this.props.product;
 		return(
-			<div >			
-    			<h4>{product.name}</h4>
-    			<br />
-    			<img src={product.url} height="30" width="20"/>
-    			<br />
-    			<h4>{product.price}</h4>
-    			<br />
-    			<h4>Quantity</h4>
-    			<i className="fa fa-plus"></i>{'   '}
-    			<i className="fa fa-minus"></i>
+			<div className="product">
+    			<div className="title">{product.name}</div>
+    			<img src={product.url}/>
+                <div>
+        			<div className="price">Rs. {product.price}</div>
+                    <div className="qty-container">
+            			Quantity <i className="fa fa-plus" /> {'   '}
+            			<i className="fa fa-minus" />
+                    </div>
+                </div>
 			</div>
 			);
 	}
 }
-export default ProductDetails;
+
+Product.defaultProps = {
+    product: {
+        name: 'TV',
+        url: 'https://images-na.ssl-images-amazon.com/images/I/81qex9rNZQL._SL1500_.jpg',
+        price: 1000,
+    },
+};
+
+export default Product;

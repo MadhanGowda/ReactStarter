@@ -4,13 +4,14 @@ import ReactDOM from 'react-dom';
 import LandingScreen from './Containers/LandingScreenContainer'
 import DiscriptionScreen from './Containers/DiscriptionScreenContainer'
 
+import Product from './Components/Product'
+
 
 //create a component that output html
 const App = () => {
     return (
         <div>
-
-          <DiscriptionScreen />
+          <Product />
         </div>
         );
 }
