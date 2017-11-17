@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import ProductDetailsContiner from './Containers/ProductContiner'
+
 //create a component that output html
 const App = () => {
     return (
         <div>
           Hello World
+          <ProductDetailsContiner />
         </div>
         );
 }
