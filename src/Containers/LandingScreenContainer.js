@@ -32,11 +32,10 @@ const ProductData = [
 
 class LandingScreen extends React.Component{
 	render(){
-
 		return(
 			<div>
-			<HeaderBar />
-			<ProductListComponent prod = {ProductData} />
+  			<HeaderBar />
+  			<ProductListComponent products={ProductData} />
 			</div>
 			);
 	}
