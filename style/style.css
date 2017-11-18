@@ -166,3 +166,30 @@ body {
   margin-top: 15px;
      margin-bottom: 15px;
 }
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    font-size: 26px;
+    padding: 20px;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 20px;
+}
+td > img{
+	height: 41px;
+    width: 30px;
+	margin-right: 25px;
+}
+.tablehead{
+	display: inline-block;
+	width: 100%;
+	height: 60px;
+	background-color: #fff;
+	margin-bottom: 5px;
+	border-radius: 2px;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .08);
