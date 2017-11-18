@@ -2,11 +2,19 @@ import React from 'react';
 
 class HeaderBar extends React.Component{
 	render(){
+		const num=0;
 	return(
+		<div className="headerbar">
 		<div>
-		<h2>Company Name</h2>
-		<i className="fa fa-shopping-cart"></i>
-		<br />
+			<div >
+				<img src="../../style/logo.png"/>
+			<button className="cartbtn">
+				<i className="fa fa-shopping-cart"></i>
+				{'  '}CART{'  '} 
+				<button className="cartnum">{num}</button>
+				</button>
+		</div>
+		</div>
 		</div>
 		);
 	}

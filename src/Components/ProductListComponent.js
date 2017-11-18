@@ -14,13 +14,11 @@ class ProductListComponent extends React.Component{
 			Product_List.push(<ProductDetails produc={product} key={product.id}/>);
 		});
 		return(
-			<table>
-			<thead>
-			</thead>
-				<tbody>
+			<div>
+			<ul className="ullist">
 					{Product_List}
-				</tbody>
-			</table>
+					</ul>
+				</div>
 			);
 	}
 }

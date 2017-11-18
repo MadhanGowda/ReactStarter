@@ -4,17 +4,22 @@ class ProductDetails extends React.Component{
 	render(){
 		const product = this.props.produc;
 		return(
-			<div >			
-    			<h4>{product.name}</h4>
-    			<br />
-    			<img src={product.url} height="30" width="20"/>
-    			<br />
-    			<h4>{product.price}</h4>
-    			<br />
-    			<h4>Quantity</h4>
-    			<i className="fa fa-plus"></i>{'   '}
-    			<i className="fa fa-minus"></i>
-			</div>
+			<li className="product">
+				<div className='box'>			
+	    			<div className="title">{product.name}</div>
+	    			<img src={product.url}/>
+	    			<div className="price">Rs/- {product.price}</div>
+	    			<div className="quantity-ct">Quantity{'  '}
+	    			<button className="btonp"> 
+	    				<i className="fa fa-plus"></i>{'   '}
+	    				</button>
+	    				<button className="btonm">
+	    				<i className="fa fa-minus"></i>
+	    				</button>
+	    			</div>
+				</div>
+			
+			</li>
 			);
 	}
 }
