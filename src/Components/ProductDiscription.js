@@ -1,9 +1,11 @@
 import React from 'react';
 
+
 class ProductDiscription extends React.Component{
 	render(){
 		const product = this.props.produc;
 		return(
+			
 			<div className='productdetail'>
 			<img src={product.url}/>
 					<div className='delatilbox'>	
@@ -22,6 +24,7 @@ class ProductDiscription extends React.Component{
 	    			</div>
 				</div>
 			</div>
+			
 			);
 	}
 }

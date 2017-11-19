@@ -1,9 +1,12 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 class ProductDetails extends React.Component{
 	render(){
 		const product = this.props.produc;
 		return(
+		<Link to ={`/details/${product.id}`}>			
 			<li className="product">
 				<div className='box'>			
 	    			<div className="title">{product.name}</div>
@@ -20,7 +23,9 @@ class ProductDetails extends React.Component{
 				</div>
 			
 			</li>
+			</Link>
 			);
 	}
 }
+
 export default ProductDetails;
