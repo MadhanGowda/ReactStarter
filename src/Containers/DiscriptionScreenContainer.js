@@ -3,26 +3,26 @@ import React from 'react';
 import HeaderBar from '../Components/HeaderBar.js';
 import ProductDiscription from '../Components/ProductDiscription.js';
 import { ProductData } from '../stub';
-import ProductDetails from '../Components/Product';
-import ProductListComponent from '../Components/ProductListComponent.js';
+
+import RealtedProductListComponent from '../Components/RealatedProductListComponent.js';
 import NoPageFoundScreen from './NoPageFoundScreen';
 
-import { find } from 'lodash'
+import { find } from 'lodash';
 
 
 class DiscriptionScreen extends React.Component{
 	render(){
-        //debugger;
         const l=ProductData.length;
-        if(parseInt(this.props.match.params.id)<l){
+        if(parseInt(this.props.match.params.id)<=l){
 		const item = find(ProductData, { id: parseInt(this.props.match.params.id)});
+
 		return(
 			<div>
 			<HeaderBar />
 			<ProductDiscription produc={item} key={item.id}/>
 			<div className="rp">Related Products</div>
-			<ProductListComponent prod = {item.related_products} />
-			</div>
+			<RealtedProductListComponent prod = {item.related_products} />
+            </div>
 			);
         }
         else
@@ -36,4 +36,3 @@ class DiscriptionScreen extends React.Component{
 	}
 }
 export default DiscriptionScreen;
-//
