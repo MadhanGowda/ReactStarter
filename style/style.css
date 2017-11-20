@@ -15,7 +15,7 @@ body {
   text-align: center;
 }
 
-.product .quantity-ct{
+.quantity-ct{
 	font-size: 18px;
 	font-weight: bold;
 	display: inline-block;
@@ -26,12 +26,12 @@ body {
   font-weight: bold;
   display: inline-block;
 }
-.product .btonp{
+.btonp{
 	background-color: #c0ffc3;
     border: none;
     margin-right: 2px;
 }
-.product .btonm{
+.btonm{
 	background-color: #f5b9b9;;
     border: none;
 }

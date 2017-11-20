@@ -9,18 +9,19 @@ import LandingScreen from './Containers/LandingScreenContainer';
 import DiscriptionScreen from './Containers/DiscriptionScreenContainer';
 import CartScreenContainer from './Containers/CartScreenContainer';
 import NoPageFoundScreen from './Containers/NoPageFoundScreen';
+import Layout from  './Containers/layout';
 
 const routes = () => (
-	<Router>
-		<div>
+	<Layout>
+		<Router>
 			<Switch>
 				<Route exact path="/" component={LandingScreen}/>
 				<Route exact path="/details/:id" component={DiscriptionScreen}/>
 				<Route exact path="/cart" component={CartScreenContainer}/>
 				<Route path="*" component={NoPageFoundScreen}/>
 			</Switch>
-		</div>
-	</Router>
+		</Router>
+	</Layout>
 );
 
 export default routes;

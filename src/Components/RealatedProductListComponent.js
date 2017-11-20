@@ -1,8 +1,8 @@
 import React from 'react';
 
 import RelatedProduct from '../Components/RealatedProduct';
-import { ProductData } from '../stub';
-
+// import { ProductData } from '../stub';
+import { connect } from 'react-redux';
 
 class RealtedProductListComponent extends React.Component{
 	constructor(props){
@@ -10,6 +10,7 @@ class RealtedProductListComponent extends React.Component{
 		}
 	render(){
 		const a=this.props.prod;
+		const ProductData=this.props.products;
 		if(a.length==0){
 			return(
 				<div className="nrpf">
@@ -37,5 +38,9 @@ class RealtedProductListComponent extends React.Component{
 		}
 	}
 }
-
-export default RealtedProductListComponent;
+function mapStateToProps(state){
+    return {
+        products:state.prod,
+    }
+}
+export default connect(mapStateToProps)(RealtedProductListComponent);

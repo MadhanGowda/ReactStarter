@@ -2,9 +2,7 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-import { connect } from 'react-redux';
-import { addToCart } from '../Actions/cart.js'
-import { removeFromCart } from '../Actions/cart.js'
+import Quantitybar from './quantitybar';
 
 
 class ProductDetails extends React.Component{
@@ -19,25 +17,12 @@ class ProductDetails extends React.Component{
 	    			<img src={product.url}/>
 	    			</Link>
 	    			<div className="price">Rs/- {product.price}</div>
-	    			<div className="quantity-ct">Quantity{'  '}
-	    			<button className="btonp" onClick={() => {this.props.addToCart(product)}}> 
-	    				<i className="fa fa-plus"></i>{'   '}
-	    				</button>
-	    				<button className="btonm">
-	    				<i className="fa fa-minus" onClick={() => {this.props.removeFromCart(product)}}></i>
-	    				</button>
-	    			</div>
+	    			<Quantitybar produc="product"/>
 				</div>
 			
 			</li>
 			);
 	}
 }
- const mapStateToProps = () =>({});
-
-const mapDispatchToProps = (dispatch) =>({
-	addToCart: (product) => dispatch(addToCart(product)),
-	removeFromCart: (product) => dispatch(removeFromCart(product)),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(ProductDetails);
+ 
+export default ProductDetails;

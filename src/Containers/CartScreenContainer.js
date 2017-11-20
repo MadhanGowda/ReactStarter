@@ -3,11 +3,12 @@ import React from 'react';
 import HeaderBar from '../Components/HeaderBar.js';
 import CartTable from '../Components/CartTable.js';
 
-import { ProductData } from '../stub';
+// import { ProductData } from '../stub';
+import { connect } from 'react-redux';
 
 class CartScreenContainer extends React.Component{
 	render(){
-		const itemlist = ProductData;
+		const itemlist = this.props.products;
 		return(
 			<div>
 				<HeaderBar />
@@ -16,4 +17,9 @@ class CartScreenContainer extends React.Component{
 			);
 	}
 }
-export default CartScreenContainer;
+function mapStateToProps(state){
+    return {
+        products:state.prod,
+    }
+}
+export default connect(mapStateToProps)(CartScreenContainer);

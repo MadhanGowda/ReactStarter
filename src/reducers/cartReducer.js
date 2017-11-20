@@ -78,7 +78,7 @@ function cartReducer(state = {}, action) {
 				}
 				else
 				{
-					debugger;
+					//debugger;
 					state.items.splice(i,1);
 					return {
 				      ...state,

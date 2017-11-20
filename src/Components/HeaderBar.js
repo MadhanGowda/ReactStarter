@@ -10,7 +10,9 @@ class HeaderBar extends React.Component{
 		<div className="headerbar">
 		<div>
 			<div >
+			<Link to ={`/`}>
 				<img src="../../style/logo.png"/>
+				</Link>
 				<Link to ={`/cart`}>
 			<button className="cartbtn" >
 				<i className="fa fa-shopping-cart"></i>
