@@ -16,7 +16,7 @@ class Layout extends React.Component{
 }
 
 function mapDispatchToProps (dispatch){
-	return{
+	return {
 		poplateProducts: function(ProductData){
 			dispatch(poplateProducts(ProductData))
 		},

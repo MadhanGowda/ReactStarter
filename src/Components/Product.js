@@ -9,20 +9,20 @@ class ProductDetails extends React.Component{
 	render(){
 		const product = this.props.produc;
 		return(
-					
+
 			<li className="product">
 				<div className='box'>
-					<Link to ={`/details/${product.id}`}>			
+					<Link to ={`/details/${product.id}`}>
 	    			<div className="title">{product.name}</div>
 	    			<img src={product.url}/>
 	    			</Link>
 	    			<div className="price">Rs/- {product.price}</div>
-	    			<Quantitybar produc="product"/>
+	    			<Quantitybar produc={product} />
 				</div>
-			
+
 			</li>
 			);
 	}
 }
- 
+
 export default ProductDetails;
