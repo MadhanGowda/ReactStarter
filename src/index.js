@@ -7,14 +7,18 @@ import ReactDOM from 'react-dom';
 // import NoPageFoundScreen from './Containers/NoPageFoundScreen';
 
 import Routes from './routes.js';
+import { Provider } from 'react-redux'
+import store from './store.js'
 
 
 //create a component that output html
 const App = () => {
     return (
+    	<Provider store={store}>
         <div>
           <Routes />
         </div>
+        </Provider>
         );
 }
 

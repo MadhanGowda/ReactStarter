@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 class ProductDiscription extends React.Component{
 	render(){
 		const product = this.props.produc;

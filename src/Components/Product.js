@@ -2,18 +2,23 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
+import { connect } from 'react-redux';
+import { addToCart } from '../Actions/cart.js'
+
 class ProductDetails extends React.Component{
 	render(){
 		const product = this.props.produc;
 		return(
-		<Link to ={`/details/${product.id}`}>			
+					
 			<li className="product">
-				<div className='box'>			
+				<div className='box'>
+					<Link to ={`/details/${product.id}`}>			
 	    			<div className="title">{product.name}</div>
 	    			<img src={product.url}/>
+	    			</Link>
 	    			<div className="price">Rs/- {product.price}</div>
 	    			<div className="quantity-ct">Quantity{'  '}
-	    			<button className="btonp"> 
+	    			<button className="btonp" onClick={() => {this.props.addToCart(product)}}> 
 	    				<i className="fa fa-plus"></i>{'   '}
 	    				</button>
 	    				<button className="btonm">
@@ -23,9 +28,13 @@ class ProductDetails extends React.Component{
 				</div>
 			
 			</li>
-			</Link>
 			);
 	}
 }
+ const mapStateToProps = () =>({});
 
-export default ProductDetails;
+const mapDispatchToProps = (dispatch) =>({
+	addToCart: (product) => dispatch(addToCart(product)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProductDetails);

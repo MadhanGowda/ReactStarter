@@ -4,7 +4,16 @@ export const ProductData = [
         "name": "body in the buff revitalizing scrub",
         "slug": "body-in-the-buff-revitalizing-scrub-grapefruit-walnut-shell-9oz",
         "price": 0.0,
-        "related_products": [],
+        "related_products": [
+            {
+        "id": 1,
+        "slug": "body-in-the-buff-revitalizing-scrub-grapefruit-walnut-shell-9oz",
+            },
+            {
+        "id": 2,
+        "slug": "body-in-the-buff-firming-scrub-espresso-coffee-bean-9oz",
+            },
+        ],
         "description": "To revitalize dull dry skin, this refreshingly fragrant formula first lathers you up then scrubs you down. The biodegradable buffing beads in this hypo-allergenic scrub contain real ground walnut shells. Warning: may cause exceedingly soft, smooth skin.",
         "url": "//hain-albabotanica-services-qa-01.galepartners.com//spree/products/131/original/AL00924_9oz_BITB_Grapefruit_Revializing_Scrub_402x.png?1481793358"
     },

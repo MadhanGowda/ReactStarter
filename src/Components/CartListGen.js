@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 class CartListGen extends React.Component{
 	render(){
 		const prddeta= this.props.produc;
