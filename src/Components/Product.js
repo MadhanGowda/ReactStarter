@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 
 import { connect } from 'react-redux';
 import { addToCart } from '../Actions/cart.js'
+import { removeFromCart } from '../Actions/cart.js'
+
 
 class ProductDetails extends React.Component{
 	render(){
@@ -22,7 +24,7 @@ class ProductDetails extends React.Component{
 	    				<i className="fa fa-plus"></i>{'   '}
 	    				</button>
 	    				<button className="btonm">
-	    				<i className="fa fa-minus"></i>
+	    				<i className="fa fa-minus" onClick={() => {this.props.removeFromCart(product)}}></i>
 	    				</button>
 	    			</div>
 				</div>
@@ -35,6 +37,7 @@ class ProductDetails extends React.Component{
 
 const mapDispatchToProps = (dispatch) =>({
 	addToCart: (product) => dispatch(addToCart(product)),
+	removeFromCart: (product) => dispatch(removeFromCart(product)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductDetails);

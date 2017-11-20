@@ -1,4 +1,5 @@
 import { ADD_TO_CART } from './../Actions/actionTypes.js'
+import { REMOVE_FROM_CART } from './../Actions/actionTypes.js'
 
 function cartReducer(state = {}, action) {
   switch (action.type) {
@@ -8,7 +9,7 @@ function cartReducer(state = {}, action) {
 
   	if(state.items!=undefined && state.items.length!=0)
   	{
-  		debugger;
+  		//debugger;
   		for(var i=0;i<state.items.length;i++)
   		{
   			if(state.items[i].productId==action.data.id)
@@ -22,7 +23,7 @@ function cartReducer(state = {}, action) {
 			        ...state.items
 			      ]
 			    } 
-			    
+
   			}  			
   		}
   	}
@@ -53,7 +54,41 @@ function cartReducer(state = {}, action) {
 			    } 
 		}
 
-	
+  case REMOVE_FROM_CART:
+  if(state.items==undefined)
+  {
+  	//no product inside no operation shold be performed
+  }
+  if(state.items!=undefined && state.items.length!=0)
+  	{
+  		for(var i=0;i<state.items.length;i++)
+  		{
+  			if(state.items[i].productId==action.data.id)
+  				if(state.items[i].quantity>1)
+  				{
+	  				state.items[i] = {productId:action.data.id ,
+	          						  quantity: state.items[i].quantity-1};
+	          		
+	          		return {
+				      ...state,
+				      items: [
+				        ...state.items
+				      ]
+				    } 
+				}
+				else
+				{
+					debugger;
+					state.items.splice(i,1);
+					return {
+				      ...state,
+				      items: [
+				        ...state.items
+				      ]
+				    }
+				}
+  		}
+   	}
 
   default:
     return state
