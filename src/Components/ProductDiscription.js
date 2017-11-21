@@ -15,7 +15,7 @@ class ProductDiscription extends React.Component{
 	    			<div className="discription">{product.description}</div>
 
 	    			<div className="price">Rs/- {product.price}</div>
-	    			<Quantitybar produc="product"/>
+	    			<Quantitybar produc={product}/>
 				</div>
 			</div>
 			

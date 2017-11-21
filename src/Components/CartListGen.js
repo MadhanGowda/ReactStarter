@@ -7,8 +7,8 @@ class CartListGen extends React.Component{
 			<tr>
 				<td><img src={prddeta.url}/>{prddeta.name}</td>
 				<td>Rs/- {prddeta.price}</td>
-				<td>{0}</td>
-				<td>{0}</td>
+				<td>{this.props.itemli}</td>
+				<td>{(prddeta.price)*(this.props.itemli)}</td>
 			</tr>			
 		);
 	}

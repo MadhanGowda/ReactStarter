@@ -8,6 +8,7 @@ import { removeFromCart } from '../Actions/cart.js'
 
 class Quantitybar extends React.Component{
 	render(){
+		//debug
 		const product= this.props.produc;
 	return(
 		<div className="quantity-ct">Quantity{'  '}

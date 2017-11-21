@@ -17,7 +17,7 @@ class ProductDetails extends React.Component{
 	    			<img src={product.url}/>
 	    			</Link>
 	    			<div className="price">Rs/- {product.price}</div>
-	    			<Quantitybar produc="product"/>
+	    			<Quantitybar produc={product}/>
 				</div>
 			
 			</li>
