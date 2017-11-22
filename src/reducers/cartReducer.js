@@ -1,7 +1,9 @@
 import { ADD_TO_CART } from './../Actions/actionTypes.js'
 import { REMOVE_FROM_CART } from './../Actions/actionTypes.js'
+import { ADD_TO_CART_INITIAL } from './../Actions/actionTypes.js'
 
 function cartReducer(state = {}, action) {
+	//debugger;
   switch (action.type) {
   case ADD_TO_CART:
   	
@@ -89,6 +91,21 @@ function cartReducer(state = {}, action) {
 				}
   		}
    	}
+   	case ADD_TO_CART_INITIAL:
+   		const arr=[];
+   		//debugger;
+   		for(var i=0;i<action.data.length;i++)
+   		{
+   			if (action.data[i].count>0) {
+   				arr.push({productId:action.data[i].id ,
+	          			  quantity:action.data[i].count})
+   			}
+   		}
+   		return {
+			      ...state,
+			      items: arr
+			    } 
+
 
   default:
     return state

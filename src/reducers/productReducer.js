@@ -1,6 +1,7 @@
 import { POPULATE_PRODUCTS } from '../Actions/actionTypes';
 
 function productReducer(state = [], action){
+	//debugger;
 	switch (action.type){
 	case POPULATE_PRODUCTS:
 		return [
@@ -10,5 +11,6 @@ function productReducer(state = [], action){
 	default:
 	return state
 	}
+
 }
 export default productReducer;
